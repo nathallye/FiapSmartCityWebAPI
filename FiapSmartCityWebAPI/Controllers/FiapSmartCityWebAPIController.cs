@@ -42,7 +42,8 @@ namespace FiapSmartCityWebAPI.Controllers
         }
 
         // POST localhost:7188/api/FiapSmartCityWebAPI/ProductType
-        [HttpPost(Name = "ProductType")]
+        [HttpPost]
+        [Route("ProductType")]
         public IActionResult Post([FromBody] ProductType productType)
         {
             try
@@ -64,7 +65,8 @@ namespace FiapSmartCityWebAPI.Controllers
         }
 
         // DELETE localhost:7188/api/FiapSmartCityWebAPI/ProductType?id={}
-        [HttpDelete(Name = "ProductType")]
+        [HttpDelete]
+        [Route("ProductType/{id}")]
         public IActionResult Delete(int id)
         {
             try
@@ -80,7 +82,8 @@ namespace FiapSmartCityWebAPI.Controllers
         }
 
         // PUT or PATCH localhost:7188/api/FiapSmartCityWebAPI/ProductType?id={}
-        [HttpPut(Name = "ProductType")]
+        [HttpPut]
+        [Route("ProductType/{id}")]
         public IActionResult Put([FromBody] ProductType productType)
         {
             try
